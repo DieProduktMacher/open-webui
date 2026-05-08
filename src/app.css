@@ -119,7 +119,7 @@ textarea::placeholder {
 }
 
 .font-primary {
-	font-family: 'Archivo', 'Vazirmatn', sans-serif;
+	font-family: 'Inter', 'Vazirmatn', sans-serif;
 }
 
 .drag-region {
@@ -720,11 +720,59 @@ input[type='number'] {
 body {
 	background: #fff;
 	color: #000;
+	font-family: 'Inter', 'Vazirmatn', sans-serif;
 }
 
 .dark body {
 	background: #171717;
 	color: #eee;
+}
+
+/* Favicon shown inside the black sidebar needs a light backdrop so the icon is visible */
+.sidebar-new-chat-icon {
+	background-color: #fff;
+	padding: 2px;
+}
+
+/* Black sidebar — both the collapsed icon rail and the expanded panel */
+#sidebar {
+	background-color: #000 !important;
+	color: #fff !important;
+	border-color: #1a1a1a !important;
+}
+
+#sidebar button,
+#sidebar a {
+	color: #fff !important;
+}
+
+#sidebar button:hover,
+#sidebar a:hover {
+	background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fade-out gradient at the bottom of the chat list */
+#sidebar .sidebar-bg-gradient-to-t {
+	background-image: linear-gradient(to top, #000 0%, #000 50%, transparent 100%) !important;
+}
+
+/* Text inside the sidebar that uses gray utility classes */
+#sidebar .text-gray-600,
+#sidebar .text-gray-700,
+#sidebar .text-gray-900,
+#sidebar .text-gray-850 {
+	color: #fff !important;
+}
+
+#sidebar .text-gray-400,
+#sidebar .text-gray-500 {
+	color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Active / selected chat item highlight */
+#sidebar .bg-gray-100,
+#sidebar .dark\:bg-gray-900 {
+	background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 /* Position the handle relative to each LI */
